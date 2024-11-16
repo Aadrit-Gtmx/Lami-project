@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lami.com - Find Your Perfect Match</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const container = document.querySelector(".testimonial-container");
+            const testimonials = Array.from(container.children);
+    
+            // Clone the testimonials to create a seamless loop
+            testimonials.forEach(testimonial => {
+                const clone = testimonial.cloneNode(true);
+                container.appendChild(clone);
+            });
+    
+            // Ensure smooth infinite scroll using CSS animation
+            container.style.animation = "scroll-left 20s linear infinite";
+        });
+    
+        function bounceButton(button) {
+            button.classList.add('bounce');
+            setTimeout(() => button.classList.remove('bounce'), 300);
+        }
+    </script>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <h1 onclick="window.location.href='index.html'">Lami.com</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="login.html" class="btn" style="color: white;">Login</a> | <a href="signup.html" class="btn" style="color: white;">Signup</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="hero-content">
+            <h2>Find Your Perfect Match with Lami.com</h2>
+            <p>Discover meaningful connections rooted in tradition and culture.</p>
+            <button onclick="bounceButton(this)" class="btn-primary" style="color: white;">Find Your Match</button>
+            <a href="login.html"><button onclick="bounceButton(this)" class="btn-secondary">Sign Up / Log In</button></a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features">
+        <div class="feature">
+            <h3>Personalized Matching</h3>
+            <p>Get matched with individuals who share your values and goals.</p>
+        </div>
+        <div class="feature">
+            <h3>Verified Profiles</h3>
+            <p>Connect with genuine profiles for a safer experience.</p>
+        </div>
+        <div class="feature">
+            <h3>Cultural Compatibility</h3>
+            <p>Ensure compatibility with partners sharing your heritage and beliefs.</p>
+        </div>
+        <div class="feature">
+            <h3>Privacy-Focused</h3>
+            <p>Your privacy is our priority, always.</p>
+        </div>
+    </section>
+
+    <!-- Wedding Gallery Section -->
+    <section id="gallery">
+        <h2>Celebrate Tradition</h2>
+        <div class="gallery-scroll">
+            <img src="wedding1.jpg" alt="Traditional Nepalese Wedding">
+            <img src="wedding2.jpg" alt="Nepalese Bride and Groom">
+            <img src="wedding3.jpg" alt="Nepalese Wedding Ceremony">
+            <img src="wedding4.jpg" alt="Nepalese Family Celebrating">
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <!-- Testimonials Section -->
+<section id="testimonials">
+    <h2>Success Stories</h2>
+    <div class="testimonial-container">
+        <div class="testimonial">
+            <blockquote>"We found love and companionship through this platform. Thank you!"</blockquote>
+            <p>- Ramesh & Sita</p>
+        </div>
+        <div class="testimonial">
+            <blockquote>"A beautiful journey with someone who understands my values."</blockquote>
+            <p>- Sunita & Rajesh</p>
+        </div>
+        <div class="testimonial">
+            <blockquote>"Our families bonded through this beautiful platform."</blockquote>
+            <p>- Manoj & Anjali</p>
+        </div>
+        <div class="testimonial">
+            <blockquote>"An amazing experience! Highly recommended."</blockquote>
+            <p>- Priya & Keshav</p>
+        </div>
+    </div>
+</section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About L ami.com</h2>
+        <p>
+            Lami.com is a leading Nepalese marriage platform designed to bring together individuals who value tradition, culture, and meaningful relationships. 
+            We strive to make the process of finding your life partner safe, efficient, and joyous. With features like personalized matchmaking, verified profiles, and privacy-focused communication, Lami.com ensures that your journey to love and companionship is as seamless as possible.
+        </p>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-links">
+            <a href="#about">About</a>
+            <a href="#faq">FAQs</a>
+            <a href="#blog">Blog</a>
+            <a href="#contact">Contact Us</a>
+        </div>
+        <p>&copy; 2024 Lami.com. All rights reserved.</p>
+    </footer>
+</body>
+</html>

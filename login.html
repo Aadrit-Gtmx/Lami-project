@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Perfect Match</title>
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Body Styling */
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-color: #f9f9f9;
+            color: #333;
+            flex-direction: column;
+        }
+
+        /* Header */
+        header {
+            width: 100%;
+            background-color: #7d4e57;
+            color: white;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header h1 {
+            cursor: pointer;
+            font-size: 24px;
+            font-weight: bold;
+            margin-left: 20px;
+        }
+
+        /* Login Container */
+        .login-container {
+            background-color: #fff;
+            width: 100%;
+            max-width: 400px;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            position: relative;
+            margin-top: 80px; /* Offset for fixed header */
+        }
+
+        .login-container h2 {
+            color: #7d4e57;
+            margin-bottom: 20px;
+            font-size: 28px;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .login-container p {
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+
+        /* Form Fields */
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 14px;
+            margin-bottom: 5px;
+            color: #555;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus {
+            border-color: #7d4e57;
+        }
+
+        /* Login Button */
+        .btn-login {
+            width: 100%;
+            padding: 12px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            background-color: #f05454;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            animation: pulse 1.5s infinite;
+        }
+
+        .btn-login:hover {
+            background-color: #d94343;
+        }
+
+        /* Signup Prompt */
+        .signup-prompt {
+            margin-top: 20px;
+            font-size: 14px;
+        }
+
+        .signup-prompt a {
+            color: #7d4e57;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .signup-prompt a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1 onclick="window.location.href='index.html'">Perfect Match</h1>
+    </header>
+
+    <!-- Login Container -->
+    <div class="login-container">
+        <h2>Welcome Back</h2>
+        <p>Log in to continue finding your perfect match</p>
+
+        <!-- Login Form -->
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+
+            <button type="submit" class="btn-login">Log In</button>
+        </form>
+
+        <div class="signup-prompt">
+            <p>Don’t have an account yet? <a href="signup.html">Sign up now</a></p>
+        </div>
+    </div>
+</body>
+</html>
